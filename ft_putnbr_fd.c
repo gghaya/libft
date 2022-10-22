@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gghaya <gghaya@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:24:41 by gghaya            #+#    #+#             */
-/*   Updated: 2022/10/21 23:21:53 by gghaya           ###   ########.fr       */
+/*   Created: 2022/10/21 20:19:11 by gghaya            #+#    #+#             */
+/*   Updated: 2022/10/21 20:53:15 by gghaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	count;
+	long int	nbr;
 
-	count = 0;
-	while (count < n)
+	nbr = (long int)n;
+	if (nbr < 0)
 	{
-		*(char *)(s + count) = ( char )c ;
-		count++;
+		ft_putchar_fd('-', fd);
+		nbr *= -1;
 	}
-	return (s);
+	if (nbr <= 9)
+	{
+		ft_putchar_fd(nbr + '0', fd);
+	}
+	if (nbr > 9)
+	{
+		ft_putnbr_fd ((nbr / 10), fd);
+		ft_putnbr_fd ((nbr % 10), fd);
+	}
 }
-// int main ()
-// {
-// 	int arr[10] = {1, 2, 3, 4, 5, 6};
-// 	int i = 0;
-//     int t = 53;
-//     ft_memset(arr, t,4);
-//     for (i = 0; i < 6; i++)
-//         printf("%d\t",arr[i]);
-//     return 0;
-// }

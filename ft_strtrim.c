@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gghaya <gghaya@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 22:24:41 by gghaya            #+#    #+#             */
-/*   Updated: 2022/10/21 23:21:53 by gghaya           ###   ########.fr       */
+/*   Created: 2022/10/21 23:59:15 by gghaya            #+#    #+#             */
+/*   Updated: 2022/10/22 13:39:50 by gghaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include"libft.h"
+#include<stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t	count;
-
-	count = 0;
-	while (count < n)
-	{
-		*(char *)(s + count) = ( char )c ;
-		count++;
-	}
-	return (s);
-}
-// int main ()
+// char *ft_strtrim(char const *s1, char const *set)
 // {
-// 	int arr[10] = {1, 2, 3, 4, 5, 6};
-// 	int i = 0;
-//     int t = 53;
-//     ft_memset(arr, t,4);
-//     for (i = 0; i < 6; i++)
-//         printf("%d\t",arr[i]);
-//     return 0;
+// 	int	i;
+
+// 	while (s1[i])
+// 	{
+// 		if ()
+// 	}
+
+
+
 // }
+
